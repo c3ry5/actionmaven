@@ -13,5 +13,8 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
     - name: Build with Maven
-      run: mvn verify org.sonarsource.scanner.maven:sonar -Dsonar.projectKey=c3ry5_actionmaven -Dsonar.organization=c3ry5-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+      run: mvn verify org.sonarsource.scanner.maven:sonar -Dsonar.projectKey=c3ry5_actionmaven -Dsonar.organization=c3ry5-github -Dsonar.host.url=https://sonarcloud.io
