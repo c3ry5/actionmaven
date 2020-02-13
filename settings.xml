@@ -20,7 +20,7 @@
         <repository>
           <id>github</id>
           <name>GitHub OWNER Apache Maven Packages</name>
-          <url>https://maven.pkg.github.com/c3ry5/REPOSITORY</url>
+          <url>https://maven.pkg.github.com/c3ry5/actionmaven</url>
         </repository>
       </repositories>
     </profile>
