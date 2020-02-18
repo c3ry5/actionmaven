@@ -15,6 +15,8 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn package
+    - name: Copy Dependancies with Maven
+      run: mvn dependency:copy-dependencies -DuseRepositoryLayout=true
     - name: Deploy to Github Package Registry
       env:
         GITHUB_USERNAME: x-access-token
