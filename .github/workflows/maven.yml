@@ -17,6 +17,8 @@ jobs:
       run: mvn package
     - name: Copy Dependancies with Maven
       run: mvn dependency:copy-dependencies -DuseRepositoryLayout=true
+    - name: Install Tree
+      run: sudo apt-get install tree
     - name: View Structure
       run: tree
     - name: Deploy to Github Package Registry
