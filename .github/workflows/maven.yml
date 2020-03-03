@@ -13,12 +13,14 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: Build with Maven
-      run: mvn package
-    - name: Copy Dependancies with Maven
-      run: mvn dependency:copy-dependencies -DuseRepositoryLayout=true
     - name: Install Tree
       run: sudo apt-get install tree
+    - name: Build with Maven
+      run: mvn package
+    - name: View Structure
+      run: tree
+    - name: Copy Dependancies with Maven
+      run: mvn dependency:copy-dependencies -DuseRepositoryLayout=true
     - name: View Structure
       run: tree
     - name: Deploy to Github Package Registry
