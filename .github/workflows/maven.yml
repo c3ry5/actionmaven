@@ -13,6 +13,8 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
+    - name: IP Address
+      run: ip address show
     - name: Install Tree
       run: sudo apt-get install tree
     - name: Build with Maven
